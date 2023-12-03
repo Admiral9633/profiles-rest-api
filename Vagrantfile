@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
  config.vm.box_version = "~> 20200304.0.0"
 
  config.ssh.insert_key = false
- config.vm.network "forwarded_port", guest: 8000, host: 8000
+ config.vm.network "forwarded_port", guest: 8000, host: 8000, host_ip: "127.0.0.1"
  config.vbguest.auto_update = false
 
  config.vm.provision "shell", inline: <<-SHELL
